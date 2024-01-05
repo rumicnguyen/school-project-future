@@ -295,42 +295,6 @@ const models: TsoaRoute.Models = {
         "additionalProperties": false,
     },
     // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
-    "ICreateZaloPayOrder": {
-        "dataType": "refObject",
-        "properties": {
-            "amount": {"dataType":"double","required":true},
-            "order_id": {"dataType":"string","required":true},
-            "bank_code": {"dataType":"string","required":true},
-        },
-        "additionalProperties": false,
-    },
-    // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
-    "ICallBackZaloPay": {
-        "dataType": "refObject",
-        "properties": {
-            "data": {"dataType":"string","required":true},
-            "mac": {"dataType":"string","required":true},
-            "type": {"dataType":"double","required":true},
-        },
-        "additionalProperties": false,
-    },
-    // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
-    "IQueryZaloPayOrderStatusRes": {
-        "dataType": "refObject",
-        "properties": {
-            "orderStatus": {"dataType":"double","required":true},
-        },
-        "additionalProperties": false,
-    },
-    // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
-    "IQueryZaloPayOrderStatus": {
-        "dataType": "refObject",
-        "properties": {
-            "app_trans_id": {"dataType":"string","required":true},
-        },
-        "additionalProperties": false,
-    },
-    // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
     "IRevenueValue": {
         "dataType": "refObject",
         "properties": {
@@ -1102,81 +1066,6 @@ export function RegisterRoutes(app: Router) {
 
 
               const promise = controller.getDetailOrderById.apply(controller, validatedArgs as any);
-              promiseHandler(controller, promise, response, undefined, next);
-            } catch (err) {
-                return next(err);
-            }
-        });
-        // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
-        app.post('/api/v1/orders/pay-with-zalopay',
-            ...(fetchMiddlewares<RequestHandler>(OrdersController)),
-            ...(fetchMiddlewares<RequestHandler>(OrdersController.prototype.payWithZalopay)),
-
-            function OrdersController_payWithZalopay(request: any, response: any, next: any) {
-            const args = {
-                    dto: {"in":"body","name":"dto","required":true,"ref":"ICreateZaloPayOrder"},
-            };
-
-            // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
-
-            let validatedArgs: any[] = [];
-            try {
-                validatedArgs = getValidatedArgs(args, request, response);
-
-                const controller = new OrdersController();
-
-
-              const promise = controller.payWithZalopay.apply(controller, validatedArgs as any);
-              promiseHandler(controller, promise, response, undefined, next);
-            } catch (err) {
-                return next(err);
-            }
-        });
-        // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
-        app.post('/api/v1/orders/callback-zalo-pay',
-            ...(fetchMiddlewares<RequestHandler>(OrdersController)),
-            ...(fetchMiddlewares<RequestHandler>(OrdersController.prototype.callbackZaloPay)),
-
-            function OrdersController_callbackZaloPay(request: any, response: any, next: any) {
-            const args = {
-                    dto: {"in":"body","name":"dto","required":true,"ref":"ICallBackZaloPay"},
-            };
-
-            // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
-
-            let validatedArgs: any[] = [];
-            try {
-                validatedArgs = getValidatedArgs(args, request, response);
-
-                const controller = new OrdersController();
-
-
-              const promise = controller.callbackZaloPay.apply(controller, validatedArgs as any);
-              promiseHandler(controller, promise, response, undefined, next);
-            } catch (err) {
-                return next(err);
-            }
-        });
-        // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
-        app.post('/api/v1/orders/query-zalopay-order-status',
-            ...(fetchMiddlewares<RequestHandler>(OrdersController)),
-            ...(fetchMiddlewares<RequestHandler>(OrdersController.prototype.queryZalopayOrderStatus)),
-
-            function OrdersController_queryZalopayOrderStatus(request: any, response: any, next: any) {
-            const args = {
-                    dto: {"in":"body","name":"dto","required":true,"ref":"IQueryZaloPayOrderStatus"},
-            };
-
-            // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
-
-            let validatedArgs: any[] = [];
-            try {
-                validatedArgs = getValidatedArgs(args, request, response);
-
-                const controller = new OrdersController();
-
-
-              const promise = controller.queryZalopayOrderStatus.apply(controller, validatedArgs as any);
               promiseHandler(controller, promise, response, undefined, next);
             } catch (err) {
                 return next(err);

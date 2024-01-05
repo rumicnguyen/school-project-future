@@ -17,11 +17,11 @@ export default function AddressCard({
     address;
   return (
     <div className="relative group border-[1px] px-4 py-3 border-light-gray overflow-hidden">
-      {address.default && (
+      {/* {address.default && (
         <div className="absolute p-2 text-white rounded top-3 right-4 bg-dark-slate-gray text-heading-10">
           Mặc định
         </div>
-      )}
+      )} */}
 
       <div className="absolute transition-all duration-150 ease-out group-hover:right-4 -right-12 top-1/3">
         <CircleBtn onClick={onEditClick} type="wheat">

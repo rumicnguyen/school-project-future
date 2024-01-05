@@ -14,8 +14,6 @@ import Select, { SelectChangeEvent } from '@mui/material/Select'
 
 export default function Products() {
   const [value, setValue] = useState<string>('none')
-  const [loading, setLoading] = useState<boolean>(true)
-  const [option, setOption] = useState<string>('None')
 
   const handleChange = (event: SelectChangeEvent) => {
     setValue(event.target.value as string)
@@ -35,7 +33,7 @@ export default function Products() {
               label='Filter'
               onChange={handleChange}
             >
-              <MenuItem value={'none'}>không</MenuItem>
+              <MenuItem value={'none'}>All</MenuItem>
               <MenuItem value={'date'}>Hôm nay</MenuItem>
             </Select>
           </FormControl>

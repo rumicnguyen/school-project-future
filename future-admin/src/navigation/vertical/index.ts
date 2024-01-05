@@ -9,7 +9,7 @@ import CreditCardOutline from 'mdi-material-ui/CreditCardOutline'
 import AccountPlusOutline from 'mdi-material-ui/AccountPlusOutline'
 import AlertCircleOutline from 'mdi-material-ui/AlertCircleOutline'
 import GoogleCirclesExtended from 'mdi-material-ui/GoogleCirclesExtended'
-import { ShapeOutline } from 'mdi-material-ui'
+import { ShapeOutline, StoreSettingsOutline } from 'mdi-material-ui'
 import ReceiptText from 'mdi-material-ui/ReceiptText'
 
 // ** Type import
@@ -24,7 +24,7 @@ const navigation = (): VerticalNavItemsType => {
     },
     {
       title: 'Product',
-      icon: HomeOutline,
+      icon: StoreSettingsOutline,
       path: '/product'
     },
     {

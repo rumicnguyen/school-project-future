@@ -176,7 +176,7 @@ const FormCheckout = () => {
                 />
               ))}
             </div>
-            {paymentMethod === "ZaloPay" && (
+            {/* {paymentMethod === "ZaloPay" && (
               <div className="mt-8">
                 <h4 className="mb-5 text-heading-8">
                   Chọn 1 trong các phương thức thanh toán của ZaloPay:
@@ -216,7 +216,7 @@ const FormCheckout = () => {
                   </div>
                 </div>
               </div>
-            )}
+            )} */}
           </div>
         </div>
         <div className="bg-scarlet px-7 py-[34px] h-fit">

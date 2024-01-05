@@ -1,9 +1,7 @@
 // ** MUI Imports
 import Box from '@mui/material/Box'
 import Link from '@mui/material/Link'
-import { Theme } from '@mui/material/styles'
 import Typography from '@mui/material/Typography'
-import useMediaQuery from '@mui/material/useMediaQuery'
 
 const FooterContent = () => {
   return (
@@ -15,7 +13,7 @@ const FooterContent = () => {
         </Box>
         {` by `}
         <Link target='_blank' href='#'>
-          Nhóm 1
+          Nhóm 15
         </Link>
       </Typography>
     </Box>

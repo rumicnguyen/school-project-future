@@ -71,20 +71,20 @@ export class OrdersController extends Controller {
   public async getDetailOrderById(@Query("order-id") orderId: string) {
     return OrderService.getDetailOrderById(orderId);
   }
-  @Post("/pay-with-zalopay")
-  public async payWithZalopay(@Body() dto: ICreateZaloPayOrder) {
-    return OrderService.createPaymentZaloPayURL(dto);
-  }
+  // @Post("/pay-with-zalopay")
+  // public async payWithZalopay(@Body() dto: ICreateZaloPayOrder) {
+  //   return OrderService.createPaymentZaloPayURL(dto);
+  // }
 
-  @Post("/callback-zalo-pay")
-  public async callbackZaloPay(@Body() dto: ICallBackZaloPay) {
-    return OrderService.callbackZaloPay(dto);
-  }
+  // @Post("/callback-zalo-pay")
+  // public async callbackZaloPay(@Body() dto: ICallBackZaloPay) {
+  //   return OrderService.callbackZaloPay(dto);
+  // }
 
-  @Post("/query-zalopay-order-status")
-  public async queryZalopayOrderStatus(@Body() dto: IQueryZaloPayOrderStatus) {
-    return OrderService.queryZalopayOrderStatus(dto.app_trans_id);
-  }
+  // @Post("/query-zalopay-order-status")
+  // public async queryZalopayOrderStatus(@Body() dto: IQueryZaloPayOrderStatus) {
+  //   return OrderService.queryZalopayOrderStatus(dto.app_trans_id);
+  // }
 
   @Security("jwt", ["admin"])
   @Get("/revenue")
